@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <script>
+    document.write('Escribe la fecha (mes/dia/año)');
+    function validarFecha(fecha){
+      	object=document.getElementById(fecha);
+		valueForm=object.value;
+			var patron=/^(0[1-9]|1[0-2])\/(0[1-9]|1\d|2\d|3[01])\/(0[1-9]|1[1-9]|2[1-9])$/;
+			if (valueForm.search(patron)==0) {
+				object.style.color="#000";
+				return;
+			}
+			object.style.color="#f00";
+    }
+    </script>
+    <input type="text" name="fecha" id="fecha" value="" class="data" required onKeyUp="javascript:validarFecha('fecha')">
+  </body>
+</html>

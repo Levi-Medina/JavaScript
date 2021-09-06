@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Encender foco</title>
+	<style>
+		h1 {color:  blue;}
+		h2 {font-family: Impact;}
+		body {text-align: center;}
+	</style>
+</head>
+<body>
+	<h1>Enciende el foco</h1>
+	
+	<button onclick="document.getElementById('foto').src='encendido.png'">Encender</button>
+	<img id="foto" src="apagado.png" width="400px" height="300px">
+	<button onclick="document.getElementById('foto').src='apagado.png'">Apagado</button>
+
+	<h2>¿Que sexo eres?</h2>
+	<button onclick="document.getElementById('sexo').src='hombre.jpg'">Hombre</button>
+	<img id="sexo" src="mujer.jpg" width="300px" height="300px">
+	<button onclick="document.getElementById('sexo').src='mujer.jpg'">Mujer</button>
+</body>
+</html>

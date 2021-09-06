@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Validar Número
+	</title>
+	<script>
+		/*Validar número entero, negativo y fraccionario*/
+		document.write('<p><h2> Escribe un número:</h2></p>');
+		function validarSiNumero(numero){
+			if(/^([0-9])*$/.test(numero))
+				alert("El valor "+numero+" es un número entero");
+			else if(numero<0)
+				alert("El valor "+numero+" es un número negativo");
+			else if( /^\d*\.?\d*$/.test(numero))
+				alert("El valor "+numero+" es un número fraccionario");
+			else
+				alert("El valor "+numero+" no es un número");
+		}
+	</script>
+	<input type="text" name="numero" id="numero" value="" class="data" required onKeyUp="javascript:validarSiNumero(this.value)">
+	</head>
+<body >
+</body>
+</html>

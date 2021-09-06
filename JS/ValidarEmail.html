@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		Validar Email
+	</title>
+	<script type="text/javascript">
+		/*Validar correo*/
+		document.write('<h2 style="color:red">Escribe tu correo</h2>');
+		function validateMail(idMail){
+			object=document.getElementById(idMail);
+			valueForm=object.value;
+
+			var patron=/^\w+([\.-]?\w+)*@\w+([\.-]?\w)*(\.\w{2,4})+$/;
+			if (valueForm.search(patron)==0) {
+				object.style.color="#000";
+				return;
+			}
+			object.style.color="#f00";
+		}
+	</script>
+	<input type="text" name="email" id="email" value="" class="data" required onKeyUp="javascript:validateMail('email')">
+</head>
+<body>
+</body>
+</html>
